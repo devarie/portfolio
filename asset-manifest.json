@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/portfolio/static/js/main.b1838654.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.b1838654.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.28c5a48f.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.28c5a48f.js.map",
-    "static/js/2.a5d3481d.chunk.js": "/portfolio/static/js/2.a5d3481d.chunk.js",
-    "static/js/2.a5d3481d.chunk.js.map": "/portfolio/static/js/2.a5d3481d.chunk.js.map",
-    "static/js/3.7ad3904b.chunk.js": "/portfolio/static/js/3.7ad3904b.chunk.js",
-    "static/js/3.7ad3904b.chunk.js.map": "/portfolio/static/js/3.7ad3904b.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.5b971dbe.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.5b971dbe.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.e282dff8.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.e282dff8.js.map",
+    "static/js/2.b3d180d8.chunk.js": "/portfolio/static/js/2.b3d180d8.chunk.js",
+    "static/js/2.b3d180d8.chunk.js.map": "/portfolio/static/js/2.b3d180d8.chunk.js.map",
+    "static/js/3.1ea59a36.chunk.js": "/portfolio/static/js/3.1ea59a36.chunk.js",
+    "static/js/3.1ea59a36.chunk.js.map": "/portfolio/static/js/3.1ea59a36.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/portfolio/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.a5d3481d.chunk.js.LICENSE.txt": "/portfolio/static/js/2.a5d3481d.chunk.js.LICENSE.txt",
+    "static/js/2.b3d180d8.chunk.js.LICENSE.txt": "/portfolio/static/js/2.b3d180d8.chunk.js.LICENSE.txt",
     "static/media/Housebotel.ca87eacd.jpeg": "/portfolio/static/media/Housebotel.ca87eacd.jpeg",
     "static/media/KayakplusBavaria.f06f7b54.jpeg": "/portfolio/static/media/KayakplusBavaria.f06f7b54.jpeg",
     "static/media/Mestudio.ce597c53.jpeg": "/portfolio/static/media/Mestudio.ce597c53.jpeg",
@@ -20,9 +20,9 @@
     "static/media/freshservice_banner_groot.183186cd.jpeg": "/portfolio/static/media/freshservice_banner_groot.183186cd.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.28c5a48f.js",
-    "static/js/2.a5d3481d.chunk.js",
+    "static/js/runtime-main.e282dff8.js",
+    "static/js/2.b3d180d8.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.b1838654.chunk.js"
+    "static/js/main.5b971dbe.chunk.js"
   ]
 }
