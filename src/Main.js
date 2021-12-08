@@ -71,7 +71,7 @@ link: 'https://housebotel.nl/',
   id:4,
 img: streetart1,
 title: 'Portfolio.nl',
-info: 'This React.js website is styled by Material UI, using a grid layout, loading project by using the CARD component',
+info: 'This React.js website is styled by Material UI, using a grid layout, styled with palette colors from Material UI',
 link: '',
 },
 {
