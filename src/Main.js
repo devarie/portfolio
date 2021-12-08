@@ -51,7 +51,7 @@ const cards = [
         img: KayakplusBavaria,
         title: 'Kayakexpeditions.nl',
         info: 'A React Javascript website, using Prettier, Eslint and Typescript controlled, image loading due Cloudinary SDK, styling by Material UI',
-        link: 'http://kayakexpeditions.nl/',
+        link: 'https://devarie.github.io/kayakka/',
  },
      {
         id:2,
