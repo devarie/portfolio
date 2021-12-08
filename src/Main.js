@@ -24,6 +24,11 @@ import Mestudio from './images/Mestudio.jpeg'
 import streetart1 from './images/Streetart1.jpeg'
 import purple from "@material-ui/core/colors/purple";
 import green from "@material-ui/core/colors/green";
+import Icon from '@mui/material/Icon';
+import AddIcCallTwoToneIcon from '@mui/icons-material/AddIcCallTwoTone';
+import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
+import Chip from '@mui/material/Chip';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 function Copyright() {
   return (
@@ -143,7 +148,7 @@ export default function Main() {
           <Container sx={{ bgcolor: 'primary.main', boxShadow: 3 }} maxWidth="sm">
             <Typography
               component="h1"
-              variant="h3"
+              variant="h4"
               align="center"
               color="text.primary"
               gutterBottom
@@ -154,16 +159,14 @@ export default function Main() {
             Hi, cool you looked me up. To introduce myself shortly, i am a medior developer with 2 years of experience. Starting off with Python, switched and builded Wordpress websites, i now landed at making front-end Javascript React Websites with all kind of integrations.
             Known with Typescript, Eslint, Prettier, Databases and API third party software loading. I am looking for new projects, contact me if you are interested in my services.
             </Typography>
-            <Stack
-              sx={{ pt: 0 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
               {/* <Button variant="contained">Main call to action</Button>
               <Button variant="outlined">Secondary action</Button> */}
-            </Stack>
           </Container>
+          <Stack direction="row" spacing={1} justifyContent="center">
+          <Chip icon={<EmailTwoToneIcon/>} label="Schaaparie@gmail.com" />
+      <Chip icon={<AddIcCallTwoToneIcon/>} label="0031646286086" />
+      <Chip icon={<GitHubIcon/>} label="devarie" />
+      </Stack>
         </Box>
         <Box sx={{ boxShadow: 0, bgcolor: 'primary.dark'}}>
         <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 3 }} maxWidth="md">
