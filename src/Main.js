@@ -100,7 +100,7 @@ const theme = createTheme({
     primary: {
       light: green[300],
       main: green[500],
-      dark: green[700]
+      dark: green[800]
     },
     secondary: {
       light: purple[300],
@@ -133,7 +133,7 @@ export default function Main() {
         <Toolbar className={classes.toolbar}>
           {/* <CameraIcon sx={{ mr: 2 }} /> */}
           <Typography display="flex" justifycontent="center"variant="h3" color="text.primary" align="center" >
-         PORTFOLIO DEVARIE </Typography>
+         Portfolio </Typography>
         </Toolbar>
       </AppBar>
       <main>
@@ -153,7 +153,7 @@ export default function Main() {
               color="text.primary"
               gutterBottom
             >
-              TECH INTRODUCTION
+              Technology experience
             </Typography>
             <Typography variant="h6" align="center" color="text.secondary" paragraph>
             Hi, cool you looked me up. To introduce myself shortly, i am a medior developer with 2 years of experience. Starting off with Python, switched and builded Wordpress websites, i now landed at making front-end Javascript React Websites with all kind of integrations.
@@ -165,7 +165,9 @@ export default function Main() {
           <Stack direction="row" spacing={1} justifyContent="center">
           <Chip icon={<EmailTwoToneIcon/>} label="Schaaparie@gmail.com" />
       <Chip icon={<AddIcCallTwoToneIcon/>} label="0031646286086" />
+      <Link color="inherit" href="https://github.com/devarie" underline='hover'>
       <Chip icon={<GitHubIcon/>} label="devarie" />
+      </Link>
       </Stack>
         </Box>
         <Box sx={{ boxShadow: 0, bgcolor: 'primary.dark'}}>
