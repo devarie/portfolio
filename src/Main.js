@@ -30,6 +30,7 @@ import Chip from '@mui/material/Chip';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import bitter from 'typeface-bitter';
 import sans from 'typeface-work-sans'
+import { CardActionArea } from '@material-ui/core';
 
 function Copyright() {
   return (
@@ -177,6 +178,7 @@ export default function Main() {
                 <Card 
                   sx={{ bgcolor: 'primary.main', height: '100%', display: 'flex', flexDirection: 'column', border: 1 }}
                 >
+                <CardActionArea href={card.link}>
                   <CardMedia
                     component={cards.id}
                     sx={{
@@ -194,9 +196,10 @@ export default function Main() {
                       {card.info}
                     </Typography>
                   </CardContent>
-                  <CardActions href={card.link}>
+                  {/* <CardActions href={card.link}>
                     <Button color='inherit' size="small" href={card.link}>View</Button>
-                  </CardActions>
+                  </CardActions> */}
+                  </CardActionArea>
                 </Card>
               </Grid>
             ))}
