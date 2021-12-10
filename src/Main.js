@@ -24,11 +24,12 @@ import Mestudio from './images/Mestudio.jpeg'
 import streetart1 from './images/Streetart1.jpeg'
 import purple from "@material-ui/core/colors/purple";
 import green from "@material-ui/core/colors/green";
-import Icon from '@mui/material/Icon';
 import AddIcCallTwoToneIcon from '@mui/icons-material/AddIcCallTwoTone';
 import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
 import Chip from '@mui/material/Chip';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import bitter from 'typeface-bitter';
+import sans from 'typeface-work-sans'
 
 function Copyright() {
   return (
@@ -108,20 +109,17 @@ const theme = createTheme({
       dark: purple[700]
     }
   },
-  typography: {
-    useNextVariants: true
+  typography:{ fontFamily: '"bitter", "sans", cursive',
   },
+    // useNextVariants: true
   overrides: {
     MuiCssBaseline: {
       "@global": {
-        body: {
-          backgroundImage:
-            "url(https://designshack.net/wp-content/uploads/gradient-background.jpg)"
+        '@font-face': [sans],
         }
       }
     }
-  }
-});
+  });
 
 
 export default function Main() {
@@ -129,10 +127,10 @@ export default function Main() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative" color="primary">
+      <AppBar position="relative" color="primary" sx={{ borderBottom: 2 }}>
         <Toolbar className={classes.toolbar}>
           {/* <CameraIcon sx={{ mr: 2 }} /> */}
-          <Typography display="flex" justifycontent="center"variant="h3" color="text.primary" align="center" >
+          <Typography display="flex" justifycontent="center"variant="h3" color="text.primary" align="center" fontFamily="bitter" >
          Portfolio </Typography>
         </Toolbar>
       </AppBar>
@@ -145,7 +143,7 @@ export default function Main() {
             pb: 6,
           }}
         >
-          <Container sx={{ bgcolor: 'primary.main', boxShadow: 3 }} maxWidth="sm">
+          <Container sx={{ bgcolor: 'primary.main', boxShadow: 3, border: 0 }} maxWidth="sm">
             <Typography
               component="h1"
               variant="h4"
@@ -156,8 +154,8 @@ export default function Main() {
               Technology experience
             </Typography>
             <Typography variant="h6" align="center" color="text.secondary" paragraph>
-            Hi, cool you looked me up. To introduce myself shortly, i am a medior developer with 2 years of experience. Starting off with Python, switched and builded Wordpress websites, i now landed at making front-end Javascript React Websites with all kind of integrations.
-            Known with Typescript, Eslint, Prettier, Databases and API third party software loading. I am looking for new projects, contact me if you are interested in my services.
+            Hi, i am Arie. Cool you looked me up. I am a software developer. To introduce myself shortly, i started with Python, switched to building Wordpress websites and now i am specializing in making React apps.
+            I have experience working with Typescript, Material-UI, Eslint, Prettier, Databases API's and third party integrations. I am looking for new projects, contact me if you are interested in my services.
             </Typography>
               {/* <Button variant="contained">Main call to action</Button>
               <Button variant="outlined">Secondary action</Button> */}
@@ -177,7 +175,7 @@ export default function Main() {
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ bgcolor: 'primary.main', height: '100%', display: 'flex', flexDirection: 'column' }}
+                  sx={{ bgcolor: 'primary.main', height: '100%', display: 'flex', flexDirection: 'column', border: 1 }}
                 >
                   <CardMedia
                     component={cards.id}
