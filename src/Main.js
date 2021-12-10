@@ -169,12 +169,12 @@ export default function Main() {
       </Stack>
         </Box>
         <Box sx={{ boxShadow: 0, bgcolor: 'primary.dark'}}>
-        <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 3 }} maxWidth="md">
+        <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 0 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={2}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card
+                <Card 
                   sx={{ bgcolor: 'primary.main', height: '100%', display: 'flex', flexDirection: 'column', border: 1 }}
                 >
                   <CardMedia
@@ -194,7 +194,7 @@ export default function Main() {
                       {card.info}
                     </Typography>
                   </CardContent>
-                  <CardActions>
+                  <CardActions href={card.link}>
                     <Button color='inherit' size="small" href={card.link}>View</Button>
                   </CardActions>
                 </Card>
