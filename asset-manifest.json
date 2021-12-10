@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/portfolio/static/js/main.98a38f40.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.98a38f40.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.8c22450d.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.8c22450d.js.map",
+    "main.js": "/portfolio/static/js/main.c27c9e8d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c27c9e8d.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.430e3084.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.430e3084.js.map",
     "static/css/2.1c8523bf.chunk.css": "/portfolio/static/css/2.1c8523bf.chunk.css",
-    "static/js/2.a3ae5333.chunk.js": "/portfolio/static/js/2.a3ae5333.chunk.js",
-    "static/js/2.a3ae5333.chunk.js.map": "/portfolio/static/js/2.a3ae5333.chunk.js.map",
-    "static/js/3.9a607863.chunk.js": "/portfolio/static/js/3.9a607863.chunk.js",
-    "static/js/3.9a607863.chunk.js.map": "/portfolio/static/js/3.9a607863.chunk.js.map",
+    "static/js/2.e67384ad.chunk.js": "/portfolio/static/js/2.e67384ad.chunk.js",
+    "static/js/2.e67384ad.chunk.js.map": "/portfolio/static/js/2.e67384ad.chunk.js.map",
+    "static/js/3.6fb308f0.chunk.js": "/portfolio/static/js/3.6fb308f0.chunk.js",
+    "static/js/3.6fb308f0.chunk.js.map": "/portfolio/static/js/3.6fb308f0.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.1c8523bf.chunk.css.map": "/portfolio/static/css/2.1c8523bf.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/portfolio/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.a3ae5333.chunk.js.LICENSE.txt": "/portfolio/static/js/2.a3ae5333.chunk.js.LICENSE.txt",
+    "static/js/2.e67384ad.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e67384ad.chunk.js.LICENSE.txt",
     "static/media/Housebotel.ca87eacd.jpeg": "/portfolio/static/media/Housebotel.ca87eacd.jpeg",
     "static/media/KayakplusBavaria.f06f7b54.jpeg": "/portfolio/static/media/KayakplusBavaria.f06f7b54.jpeg",
     "static/media/Mestudio.ce597c53.jpeg": "/portfolio/static/media/Mestudio.ce597c53.jpeg",
@@ -23,10 +23,10 @@
     "static/media/freshservice_banner_groot.183186cd.jpeg": "/portfolio/static/media/freshservice_banner_groot.183186cd.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8c22450d.js",
+    "static/js/runtime-main.430e3084.js",
     "static/css/2.1c8523bf.chunk.css",
-    "static/js/2.a3ae5333.chunk.js",
+    "static/js/2.e67384ad.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.98a38f40.chunk.js"
+    "static/js/main.c27c9e8d.chunk.js"
   ]
 }
