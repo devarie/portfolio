@@ -16,6 +16,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-scroll-parallax": "^2.4.0",
     "styled-components": "^5.3.3",
     "typeface-bitter": "^1.1.13",
     "typeface-work-sans": "^1.1.13",

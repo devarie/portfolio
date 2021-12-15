@@ -26,6 +26,8 @@ import background from './images/Streetart1.jpeg'
 import styleimage from './images/artist.png'
 import theme from './theme'
 import cards from './cards'
+import { Parallax } from 'react-scroll-parallax';
+
 
 function Copyright() {
   return (
@@ -71,13 +73,24 @@ export default function Main() {
       </AppBar>
       <main>
         {/* Hero unit */}
+    
+
         <Box className={classes.background}
           sx={{
+            height: 1000,
             bgcolor: 'primary.light',
             pt: 8,
             pb: 6,
           }}
         >
+            <Parallax
+    x={['0px', '0px']}
+    y={['-690px', '280px']}
+    scale={[0.5, 1.5]}
+    opacity={[1, 0]}
+    className="foo"
+>
+    <div className="bar" />
           <Container sx={{ bgcolor: 'primary.main', boxShadow: 3, border: 0}} maxWidth="sm" >
             <Typography
               component="h1"
@@ -95,6 +108,14 @@ export default function Main() {
               {/* <Button variant="contained">Main call to action</Button>
               <Button variant="outlined">Secondary action</Button> */}
           </Container>
+          </Parallax>
+          <Parallax
+    x={['-110px', '110px']}
+    y={['-290px', '280px']}
+    scale={[0.5, 1.5]}
+    opacity={[1, 0]}
+    className="foo"
+>
           <Stack direction="row" spacing={1} justifyContent="center">
           <Chip icon={<EmailTwoToneIcon/>} label="Schaaparie@gmail.com" color='primary'/>
               </Stack>
@@ -106,6 +127,7 @@ export default function Main() {
       <Chip icon={<GitHubIcon/>} label="devarie" justifyContent="center" color='primary'/>
       </Link>
       </Stack>
+      </Parallax>
         </Box>
         <Box>
         <Box className={classes.overlay} sx={{ boxShadow: 0, bgcolor: 'primary.dark'}}>
