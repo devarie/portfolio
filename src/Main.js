@@ -43,13 +43,9 @@ function Copyright() {
 const useStyles = makeStyles(theme => ({
   overlay: { 
     backgroundImage: `url(${styleimage})`,
-    // backgroundRepeat: "no-repeat",
-    // width: 500,
-    // height: 500,
-    top: 0,
-    left: 0,
-    backgroundPosition: "center",
-    zIndex: 10,
+    backgroundPosition: '95% 0%', 
+    backgroundSize: '20% 30%', 
+    backgroundRepeat: 'repeat',
   },
   background: {
     backgroundImage: `url(${background})`,
@@ -111,6 +107,7 @@ export default function Main() {
       </Link>
       </Stack>
         </Box>
+        <Box>
         <Box className={classes.overlay} sx={{ boxShadow: 0, bgcolor: 'primary.dark'}}>
         <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 0 }} maxWidth="md">
           {/* End hero unit */}
@@ -147,6 +144,7 @@ export default function Main() {
             ))}
           </Grid>
         </Container>
+        </Box>
         </Box>
       </main>
       {/* Footer */}
