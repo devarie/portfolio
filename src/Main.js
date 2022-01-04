@@ -1,33 +1,34 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import { makeStyles } from "@material-ui/core/styles";
+import * as React from 'react'
+import AppBar from '@mui/material/AppBar'
+import { makeStyles } from '@material-ui/core/styles'
 // import CameraIcon from '@mui/icons-material/PhotoCamera';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import AddIcCallTwoToneIcon from '@mui/icons-material/AddIcCallTwoTone';
-import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
-import Chip from '@mui/material/Chip';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import bitter from 'typeface-bitter';
-import sans from 'typeface-work-sans'
-import { CardActionArea } from '@material-ui/core';
+import Card from '@mui/material/Card'
+import CardActions from '@mui/material/CardActions'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+import CssBaseline from '@mui/material/CssBaseline'
+import Grid from '@mui/material/Grid'
+import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
+import Link from '@mui/material/Link'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import AddIcCallTwoToneIcon from '@mui/icons-material/AddIcCallTwoTone'
+import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone'
+import Chip from '@mui/material/Chip'
+import GitHubIcon from '@material-ui/icons/GitHub'
+// import bitter from 'typeface-bitter'
+// import sans from 'typeface-work-sans'
+import { CardActionArea } from '@material-ui/core'
 import background from './images/Streetart1.jpeg'
-import styleimage from './images/artist.png'
+import artist from './images/artist.png'
+import artist2 from './images/artist2.png'
+
 import theme from './theme'
 import cards from './cards'
-import { Parallax } from 'react-scroll-parallax';
-
+import { Parallax } from 'react-scroll-parallax'
 
 function Copyright() {
   return (
@@ -39,43 +40,49 @@ function Copyright() {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
-  );
+  )
 }
 // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=B2DFDB&secondary.color=F3E5F5
 const useStyles = makeStyles(theme => ({
-  overlay: { 
-    backgroundImage: `url(${styleimage})`,
-    backgroundPosition: '95% 0%', 
-    backgroundSize: '20% 30%', 
-    backgroundRepeat: 'repeat',
+  overlay: {
+    backgroundImage: `url(${(artist, artist2)})`,
+    backgroundPosition: '95% 0%, 10% 10%',
+    backgroundSize: '20% 30%',
+    backgroundRepeat: 'repeat, repeat',
   },
   background: {
     backgroundImage: `url(${background})`,
-    backgroundPosition: "center",
+    backgroundPosition: 'center',
   },
-    toolbar: {
-        display: "flex",
-        justifyContent: "center"
-    },
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  card: {
+    '&:hover': { boxShadow: 3 },
+  },
+  //   @media screen and (max-width:1400px)
 }))
 
 export default function Main() {
-    const classes = useStyles();
+  const classes = useStyles()
+  // const matches = mediaquery function.....
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative" color="primary" sx={{ borderBottom: 2, color: "black"}}>
+      <AppBar position="relative" color="primary" sx={{ borderBottom: 2, color: 'black' }}>
         <Toolbar className={classes.toolbar}>
           {/* <CameraIcon sx={{ mr: 2 }} /> */}
-          <Typography display="flex" justifycontent="center"variant="h3" color="text.primary" align="center" fontFamily="bitter" >
-         Portfolio </Typography>
+          <Typography display="flex" justifycontent="center" variant="h3" color="text.primary" align="center" fontFamily="bitter">
+            Portfolio{' '}
+          </Typography>
         </Toolbar>
       </AppBar>
       <main>
         {/* Hero unit */}
-    
 
-        <Box className={classes.background}
+        <Box
+          className={classes.background}
           sx={{
             height: 1000,
             bgcolor: 'primary.light',
@@ -83,107 +90,102 @@ export default function Main() {
             pb: 6,
           }}
         >
-            <Parallax
-    x={['0px', '0px']}
-    y={['-690px', '280px']}
-    scale={[0.5, 1.5]}
-    opacity={[1, 0]}
-    className="foo"
->
-    <div className="bar" />
-          <Container sx={{ bgcolor: 'primary.main', boxShadow: 3, border: 0}} maxWidth="sm" >
-            <Typography
-              component="h1"
-              variant="h4"
-              align="center"
-              color="text.primary"
-              gutterBottom
+          <Parallax x={['0px', '0px']} y={['-690px', '280px']} scale={[0.5, 1.5]} opacity={[1, 0]} className="foo">
+            <div className="bar" />
+            <Container
+              sx={{
+                bgcolor: 'primary.main',
+                boxShadow: 3,
+                borderRadius: 5,
+                border: 0,
+                '&:hover': {
+                  background: '#4db6ac',
+                },
+              }}
+              maxWidth="sm"
             >
-              Technology experience
-            </Typography>
-            <Typography variant="h6" align="center" color="text.secondary" paragraph>
-            Hi, i am Arie a software developer. To introduce myself shortly, i started with Python, switched to building Wordpress websites and now i am specializing in making React apps.
-            I have experience working with Typescript, Material-UI, Eslint, Prettier, Databases API's and third party integrations. In need of my skills? Feel free to contact me...
-            </Typography>
+              <Typography component="h1" variant="h4" align="center" color="text.primary" gutterBottom>
+                Technology experience
+              </Typography>
+              <Typography variant="h6" align="center" color="text.secondary" paragraph>
+                Hi, I am Arie a software developer. To introduce myself shortly, I started with Python, switched to building Wordpress
+                websites and now I am specializing in making React apps. I have experience working with Typescript, Material-UI, Eslint,
+                Prettier, Databases API's and third party integrations. In need of my skills? Feel free to contact me...
+              </Typography>
               {/* <Button variant="contained">Main call to action</Button>
               <Button variant="outlined">Secondary action</Button> */}
-          </Container>
+            </Container>
           </Parallax>
-          <Parallax
-    x={['-110px', '110px']}
-    y={['-290px', '280px']}
-    scale={[0.5, 1.5]}
-    opacity={[1, 0]}
-    className="foo"
->
-          <Stack direction="row" spacing={1} justifyContent="center">
-          <Chip icon={<EmailTwoToneIcon/>} label="Schaaparie@gmail.com" color='primary'/>
-              </Stack>
-          <Stack direction="row" spacing={4} justifyContent="center">
-      <Chip icon={<AddIcCallTwoToneIcon/>} label="0031646286086" color='primary'/>
-      </Stack>
-      <Stack direction="row" justifyContent="center">
-      <Link color="inherit" href="https://github.com/devarie" underline='hover' justifyContent="center">
-      <Chip icon={<GitHubIcon/>} label="devarie" justifyContent="center" color='primary'/>
-      </Link>
-      </Stack>
-      </Parallax>
+          <Parallax x={['-110px', '110px']} y={['-290px', '280px']} scale={[0.5, 1.5]} opacity={[1, 0]} className="foo">
+            <Stack direction="row" spacing={1} justifyContent="center">
+              <Chip icon={<EmailTwoToneIcon />} label="Schaaparie@gmail.com" color="primary" />
+            </Stack>
+            <Stack direction="row" spacing={4} justifyContent="center">
+              <Chip icon={<AddIcCallTwoToneIcon />} label="0031646286086" color="primary" />
+            </Stack>
+            <Stack direction="row" justifyContent="center">
+              <Link color="inherit" href="https://github.com/devarie" underline="hover" justifyContent="center">
+                <Chip icon={<GitHubIcon />} label="devarie" justifyContent="center" color="primary" />
+              </Link>
+            </Stack>
+          </Parallax>
         </Box>
         <Box>
-        <Box className={classes.overlay} sx={{ boxShadow: 0, bgcolor: 'primary.dark'}}>
-        <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 0 }} maxWidth="md">
-          {/* End hero unit */}
-          <Grid container spacing={2}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card 
-                  sx={{ bgcolor: 'primary.main', height: '100%', display: 'flex', flexDirection: 'column', border: 1 }}
-                >
-                <CardActionArea href={card.link}>
-                  <CardMedia
-                    component={cards.id}
-                    sx={{
-                      // 16:9
-                      pt: '116.25%',
-                    }}
-                    image={card.img}
-                    alt={card.title}
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h6" component="h2">
-                      {card.title}
-                    </Typography>
-                    <Typography>
-                      {card.info}
-                    </Typography>
-                  </CardContent>
-                  {/* <CardActions href={card.link}>
+          <Box className={classes.overlay} sx={{ boxShadow: 0, bgcolor: 'primary.dark' }}>
+            <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 0 }} maxWidth="md">
+              {/* End hero unit */}
+              <Grid container spacing={2}>
+                {cards.map(card => (
+                  <Grid item key={card} xs={12} sm={6} md={4}>
+                    <Card
+                      className={classes.card}
+                      sx={{
+                        bgcolor: 'primary.main',
+                        height: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        border: 1,
+                        borderRadius: 5,
+                        '&:hover': {
+                          background: '#4db6ac',
+                        },
+                      }}
+                    >
+                      <CardActionArea href={card.link}>
+                        <CardMedia
+                          component={cards.id}
+                          sx={{
+                            // 16:9
+                            pt: '116.25%',
+                          }}
+                          image={card.img}
+                          alt={card.title}
+                        />
+                        <CardContent sx={{ flexGrow: 1 }}>
+                          <Typography gutterBottom variant="h6" component="h2">
+                            {card.title}
+                          </Typography>
+                          <Typography>{card.info}</Typography>
+                        </CardContent>
+                        {/* <CardActions href={card.link}>
                     <Button color='inherit' size="small" href={card.link}>View</Button>
                   </CardActions> */}
-                  </CardActionArea>
-                </Card>
+                      </CardActionArea>
+                    </Card>
+                  </Grid>
+                ))}
               </Grid>
-            ))}
-          </Grid>
-        </Container>
-        </Box>
+            </Container>
+          </Box>
         </Box>
       </main>
       {/* Footer */}
       <Box sx={{ bgcolor: 'primary.main', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-        </Typography>
+        <Typography variant="h6" align="center" gutterBottom></Typography>
+        <Typography variant="subtitle1" align="center" color="text.secondary" component="p"></Typography>
         <Copyright />
       </Box>
       {/* End footer */}
     </ThemeProvider>
-  );
+  )
 }
