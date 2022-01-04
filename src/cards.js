@@ -14,6 +14,13 @@ const cards = [
     link: 'https://devarie.github.io/kayakka/',
   },
   {
+    id: 4,
+    img: streetart1,
+    title: 'This Portfolio',
+    info: 'This React.js website is styled by Material UI, using a grid layout, styled with palette colors from Material UI',
+    link: '',
+  },
+  {
     id: 2,
     img: Vanleersumdranken,
     title: 'Vanleersumdranken.nl',
@@ -26,13 +33,6 @@ const cards = [
     title: 'Housebotel.nl',
     info: 'This Wordpress website is built with elementor, has API extern software integrated, and connected with a Payment Merchant',
     link: 'https://housebotel.nl/',
-  },
-  {
-    id: 4,
-    img: streetart1,
-    title: 'This Portfolio',
-    info: 'This React.js website is styled by Material UI, using a grid layout, styled with palette colors from Material UI',
-    link: '',
   },
   {
     id: 5,
