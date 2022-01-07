@@ -1,9 +1,12 @@
 import { amber, blueGrey, cyan, teal } from '@material-ui/core/colors'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 import purple from '@material-ui/core/colors/purple'
 import sans from 'typeface-work-sans'
+import bitter from 'typeface-bitter'
 
-const theme = createTheme({
+
+
+let theme = createTheme({
   palette: {
     primary: {
       light: teal[400],
@@ -26,5 +29,5 @@ const theme = createTheme({
     },
   },
 })
-
+theme = responsiveFontSizes(theme);
 export default theme

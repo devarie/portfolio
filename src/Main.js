@@ -14,18 +14,14 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import Link from '@mui/material/Link'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 import AddIcCallTwoToneIcon from '@mui/icons-material/AddIcCallTwoTone'
 import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone'
 import Chip from '@mui/material/Chip'
 import GitHubIcon from '@material-ui/icons/GitHub'
-// import bitter from 'typeface-bitter'
-// import sans from 'typeface-work-sans'
 import { CardActionArea } from '@material-ui/core'
 import background from './images/Streetart1.jpeg'
 import artist from './images/artist.png'
-import artist2 from './images/artist2.png'
-
 import theme from './theme'
 import cards from './cards'
 import { Parallax } from 'react-scroll-parallax'
@@ -42,13 +38,14 @@ function Copyright() {
     </Typography>
   )
 }
+
 // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=B2DFDB&secondary.color=F3E5F5
 const useStyles = makeStyles(theme => ({
   overlay: {
-    backgroundImage: `url(${(artist, artist2)})`,
-    backgroundPosition: '95% 0%, 10% 10%',
-    backgroundSize: '20% 30%',
-    backgroundRepeat: 'repeat, repeat',
+    backgroundImage: `url(${(artist)})`,
+    backgroundSize: '70% 80%, 70% 30%.20% 30%',
+    backgroundPosition: '5% 0%, 1% 1%, 20% 20%',
+    backgroundRepeat: 'repeat, repeat, repeat',
   },
   background: {
     backgroundImage: `url(${background})`,
@@ -61,11 +58,11 @@ const useStyles = makeStyles(theme => ({
   card: {
     '&:hover': { boxShadow: 3 },
   },
-  //   @media screen and (max-width:1400px)
 }))
 
 export default function Main() {
   const classes = useStyles()
+
   // const matches = mediaquery function.....
   return (
     <ThemeProvider theme={theme}>
@@ -90,7 +87,7 @@ export default function Main() {
             pb: 6,
           }}
         >
-          <Parallax x={['0px', '0px']} y={['-690px', '280px']} scale={[0.5, 1.5]} opacity={[1, 0]} className="foo">
+          <Parallax x={['0px', '0px']} y={['-40%', '40%']} scale={[1.0, 1.0]} opacity={[1, 0]} className={classes.foo}>
             <div className="bar" />
             <Container
               sx={{
@@ -107,7 +104,7 @@ export default function Main() {
               <Typography component="h1" variant="h4" align="center" color="text.primary" gutterBottom>
                 Technology experience
               </Typography>
-              <Typography variant="h6" align="center" color="text.secondary" paragraph>
+              <Typography variant="h6" align="center" color="text.primary">
                 Hi, I am Arie a software developer. To introduce myself shortly, I started with Python, switched to building Wordpress
                 websites and now I am specializing in making React apps. I have experience working with Typescript, Material-UI, Eslint,
                 Prettier, Databases API's and third party integrations. In need of my skills? Feel free to contact me...
@@ -116,7 +113,7 @@ export default function Main() {
               <Button variant="outlined">Secondary action</Button> */}
             </Container>
           </Parallax>
-          <Parallax x={['-110px', '110px']} y={['-290px', '280px']} scale={[0.5, 1.5]} opacity={[1, 0]} className="foo">
+          <Parallax x={['0px', '110px']} y={['0px', '280px']} scale={[0.5, 1.5]} opacity={[1, 0]} className="foo">
             <Stack direction="row" spacing={1} justifyContent="center">
               <Chip icon={<EmailTwoToneIcon />} label="Schaaparie@gmail.com" color="primary" />
             </Stack>
