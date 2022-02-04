@@ -14,7 +14,7 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import Link from '@mui/material/Link'
-import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
+import { ThemeProvider } from '@mui/material/styles'
 import AddIcCallTwoToneIcon from '@mui/icons-material/AddIcCallTwoTone'
 import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone'
 import Chip from '@mui/material/Chip'
@@ -25,12 +25,14 @@ import artist from './images/artist.png'
 import theme from './theme'
 import cards from './cards'
 import { Parallax } from 'react-scroll-parallax'
+import ReactPlayer from 'react-player'
+import easywave3 from './video/easywave3.MP4'
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography variant='body2' color='text.secondary' align='center'>
       {'Copyright © '}
-      <Link color="inherit" href="https://github.com/devarie">
+      <Link color='inherit' href='https://github.com/devarie'>
         DEVARIE
       </Link>{' '}
       {new Date().getFullYear()}
@@ -42,21 +44,33 @@ function Copyright() {
 // https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=B2DFDB&secondary.color=F3E5F5
 const useStyles = makeStyles(theme => ({
   overlay: {
-    backgroundImage: `url(${(artist)})`,
+    backgroundImage: `url(${artist})`,
     backgroundSize: '70% 80%, 70% 30%.20% 30%',
     backgroundPosition: '5% 0%, 1% 1%, 20% 20%',
     backgroundRepeat: 'repeat, repeat, repeat',
   },
-  background: {
-    backgroundImage: `url(${background})`,
-    backgroundPosition: 'center',
-  },
+  // background: {
+  //   backgroundImage: `url(${background})`,
+  //   backgroundPosition: 'center',
+  // },
   toolbar: {
     display: 'flex',
     justifyContent: 'center',
+    opacity: 0.8,
+    textTransform: 'uppercase',
   },
   card: {
     '&:hover': { boxShadow: 3 },
+  },
+  soundcloud: {
+    opacity: 0.3,
+    padding: '1rem 0px',
+    width: '90%',
+    borderRadius: '150px'
+  },
+  SoundcloudBox: {
+    opacity: 0.1,
+    borderRadius: '150px',
   },
 }))
 
@@ -67,69 +81,92 @@ export default function Main() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative" color="primary" sx={{ borderBottom: 2, color: 'black' }}>
-        <Toolbar className={classes.toolbar}>
-          {/* <CameraIcon sx={{ mr: 2 }} /> */}
-          <Typography display="flex" justifycontent="center" variant="h3" color="text.primary" align="center" fontFamily="bitter">
-            Portfolio{' '}
-          </Typography>
-        </Toolbar>
-      </AppBar>
       <main>
         {/* Hero unit */}
-
         <Box
           className={classes.background}
           sx={{
+            position: 'relative',
             height: 1000,
             bgcolor: 'primary.light',
-            pt: 8,
-            pb: 6,
+            pt: 0,
+            pb: 0,
           }}
         >
+          <video autoPlay='video' muted loop id='video'>
+            <source src={easywave3} type='video/mp4' />
+          </video>
+          <Parallax x={['0%', '0%']} y={['0%', '0%']} scale={[0.1, 1]} opacity={[1, 0]} className={classes.prlxappbar}>
+            <AppBar position='relative' sx={{ borderBottom: 0, color: 'black', background: 'transparent !important', boxShadow: 0 }}>
+              <Toolbar className={classes.toolbar}>
+                {/* <CameraIcon sx={{ mr: 2 }} /> */}
+                <Typography
+                  sx={{ letterSpacing: 10 }}
+                  display='flex'
+                  justifycontent='center'
+                  variant='h2'
+                  color='text.primary'
+                  align='center'
+                  fontFamily='sans'
+                >
+                  Portfolio{' '}
+                </Typography>
+              </Toolbar>
+            </AppBar>
+          </Parallax>
           <Parallax x={['0px', '0px']} y={['-40%', '40%']} scale={[1.0, 1.0]} opacity={[1, 0]} className={classes.foo}>
-            <div className="bar" />
+            <div className='bar' />
             <Container
               sx={{
                 bgcolor: 'primary.main',
                 boxShadow: 3,
                 borderRadius: 5,
+                opacity: '0.76',
                 border: 0,
                 '&:hover': {
                   background: '#4db6ac',
                 },
               }}
-              maxWidth="sm"
+              maxWidth='sm'
             >
-              <Typography component="h1" variant="h4" align="center" color="text.primary" gutterBottom>
+              <Typography component='h1' variant='h4' align='center' color='text.primary' gutterBottom>
                 Technology experience
               </Typography>
-              <Typography variant="h6" align="center" color="text.primary">
+              <Typography variant='h6' align='center' color='text.primary' opacity='0.6' lineHeight={1.6}>
                 Hi, I am Arie a software developer. To introduce myself shortly, I started with Python, switched to building Wordpress
-                websites and now I am specializing in making React apps. I have experience working with Typescript, Material-UI, Eslint,
+                websites and now I am specializing in making React apps. I have experience working with Typescript, Material-UI, SCSS, Eslint,
                 Prettier, Databases API's and third party integrations. In need of my skills? Feel free to contact me...
               </Typography>
+              
               {/* <Button variant="contained">Main call to action</Button>
               <Button variant="outlined">Secondary action</Button> */}
             </Container>
           </Parallax>
-          <Parallax x={['0px', '110px']} y={['0px', '280px']} scale={[0.5, 1.5]} opacity={[1, 0]} className="foo">
-            <Stack direction="row" spacing={1} justifyContent="center">
-              <Chip icon={<EmailTwoToneIcon />} label="Schaaparie@gmail.com" color="primary" />
+          <Parallax x={['0px', '110px']} y={['0px', '280px']} scale={[0.5, 1.5]} opacity={[1, 0]} className='foo'>
+            <Stack direction='row' spacing={1} justifyContent='center' opacity='0.56'>
+              <Chip icon={<EmailTwoToneIcon />} label='Schaaparie@gmail.com' opacity='0.56' color='primary' />
             </Stack>
-            <Stack direction="row" spacing={4} justifyContent="center">
-              <Chip icon={<AddIcCallTwoToneIcon />} label="0031646286086" color="primary" />
+            <Stack direction='row' spacing={4} justifyContent='center'>
+              <Chip icon={<AddIcCallTwoToneIcon />} label='0031646286086' color='primary' />
             </Stack>
-            <Stack direction="row" justifyContent="center">
-              <Link color="inherit" href="https://github.com/devarie" underline="hover" justifyContent="center">
-                <Chip icon={<GitHubIcon />} label="devarie" justifyContent="center" color="primary" />
+            <Stack direction='row' justifyContent='center'>
+              <Link color='inherit' href='https://github.com/devarie' underline='hover' justifyContent='center'>
+                <Chip icon={<GitHubIcon />} label='devarie' justifyContent='center' color='primary' />
               </Link>
             </Stack>
           </Parallax>
         </Box>
+        <Box display='flex' alignItems='flex-end' justifyContent='center' className='SoundcloudBox' sx={{ bgcolor: 'primary.main' }}>
+          <ReactPlayer
+            className={classes.soundcloud}
+            width={520}
+            height={130}
+            url='https://soundcloud.com/mattmosphere/smooth-sailing-seepferdchen'
+          />
+        </Box>
         <Box>
           <Box className={classes.overlay} sx={{ boxShadow: 0, bgcolor: 'primary.dark' }}>
-            <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 0 }} maxWidth="md">
+            <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 0 }} maxWidth='md'>
               {/* End hero unit */}
               <Grid container spacing={2}>
                 {cards.map(card => (
@@ -159,7 +196,7 @@ export default function Main() {
                           alt={card.title}
                         />
                         <CardContent sx={{ flexGrow: 1 }}>
-                          <Typography gutterBottom variant="h6" component="h2">
+                          <Typography gutterBottom variant='h6' component='h2' lineHeight={0.8}>
                             {card.title}
                           </Typography>
                           <Typography>{card.info}</Typography>
@@ -177,9 +214,9 @@ export default function Main() {
         </Box>
       </main>
       {/* Footer */}
-      <Box sx={{ bgcolor: 'primary.main', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom></Typography>
-        <Typography variant="subtitle1" align="center" color="text.secondary" component="p"></Typography>
+      <Box sx={{ bgcolor: 'primary.main', p: 6 }} component='footer'>
+        <Typography variant='h6' align='center' gutterBottom></Typography>
+        <Typography variant='subtitle1' align='center' color='text.secondary' component='p'></Typography>
         <Copyright />
       </Box>
       {/* End footer */}

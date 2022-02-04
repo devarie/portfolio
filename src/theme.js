@@ -2,8 +2,6 @@ import { amber, blueGrey, cyan, teal } from '@material-ui/core/colors'
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles'
 import purple from '@material-ui/core/colors/purple'
 import sans from 'typeface-work-sans'
-import bitter from 'typeface-bitter'
-
 
 
 let theme = createTheme({
@@ -19,7 +17,7 @@ let theme = createTheme({
       dark: purple[700],
     },
   },
-  typography: { fontFamily: '"bitter", "sans", cursive' },
+  typography: { fontFamily: '"sans", cursive' },
   // useNextVariants: true
   overrides: {
     MuiCssBaseline: {
