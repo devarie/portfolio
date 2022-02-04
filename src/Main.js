@@ -159,7 +159,7 @@ export default function Main() {
         <Box display='flex' alignItems='flex-end' justifyContent='center' className='SoundcloudBox' sx={{ bgcolor: 'primary.main' }}>
           <ReactPlayer
             className={classes.soundcloud}
-            width={520}
+            width={350}
             height={130}
             url='https://soundcloud.com/lautundluise/montagssorbet037'
           />
