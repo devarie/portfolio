@@ -20,6 +20,7 @@
     "react-scroll-parallax": "^2.4.0",
     "styled-components": "^5.3.3",
     "typeface-work-sans": "^1.1.13",
+    "typewriter-effect": "^2.18.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

@@ -27,6 +27,7 @@ import cards from './cards'
 import { Parallax } from 'react-scroll-parallax'
 import ReactPlayer from 'react-player'
 import easywave3 from './video/easywave3.MP4'
+import Typewriter from 'typewriter-effect'
 
 function Copyright() {
   return (
@@ -66,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     opacity: 0.3,
     padding: '1rem 0px',
     width: '90%',
-    borderRadius: '150px'
+    borderRadius: '150px',
   },
   SoundcloudBox: {
     opacity: 0.1,
@@ -93,7 +94,7 @@ export default function Main() {
             pb: 0,
           }}
         >
-          <video autoPlay='video' muted loop id='video'>
+          <video autoPlay='video' muted playsinline='true' loop id='video'>
             <source src={easywave3} type='video/mp4' />
           </video>
           <Parallax x={['0%', '0%']} y={['0%', '0%']} scale={[0.1, 1]} opacity={[1, 0]} className={classes.prlxappbar}>
@@ -118,28 +119,32 @@ export default function Main() {
             <div className='bar' />
             <Container
               sx={{
+                maxWidth: '350px',
                 bgcolor: 'primary.main',
                 boxShadow: 3,
                 borderRadius: 5,
-                opacity: '0.76',
+                opacity: '0.72',
                 border: 0,
                 '&:hover': {
                   background: '#4db6ac',
                 },
               }}
-              maxWidth='sm'
             >
-              <Typography component='h1' variant='h4' align='center' color='text.primary' gutterBottom>
-                Technology experience
-              </Typography>
               <Typography variant='h6' align='center' color='text.primary' opacity='0.6' lineHeight={1.6}>
-                Hi, I am Arie a software developer. To introduce myself shortly, I started with Python, switched to building Wordpress
-                websites and now I am specializing in making React apps. I have experience working with Typescript, Material-UI, SCSS, Eslint,
-                Prettier, Databases API's and third party integrations. In need of my skills? Feel free to contact me...
+                <Typewriter
+                  onInit={typewriter => {
+                    typewriter
+                      .typeString('A warm welcome to you')
+                      .pauseFor(1000)
+                      .deleteAll()
+                      .typeString(
+                        'I am Arie a software developer. I am specialized making React apps. Technologys i like to work with are: React, HTML5, SCSS, Material UI, Typescript, NPM, Github. In need of my skills? Feel free to contact me...',
+                      )
+                      .pauseFor(3000)
+                      .start()
+                  }}
+                />
               </Typography>
-              
-              {/* <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button> */}
             </Container>
           </Parallax>
           <Parallax x={['0px', '110px']} y={['0px', '280px']} scale={[0.5, 1.5]} opacity={[1, 0]} className='foo'>
@@ -157,12 +162,7 @@ export default function Main() {
           </Parallax>
         </Box>
         <Box display='flex' alignItems='flex-end' justifyContent='center' className='SoundcloudBox' sx={{ bgcolor: 'primary.main' }}>
-          <ReactPlayer
-            className={classes.soundcloud}
-            width={350}
-            height={130}
-            url='https://soundcloud.com/lautundluise/montagssorbet037'
-          />
+          <ReactPlayer className={classes.soundcloud} width={350} height={130} url='https://soundcloud.com/lautundluise/montagssorbet037' />
         </Box>
         <Box>
           <Box className={classes.overlay} sx={{ boxShadow: 0, bgcolor: 'primary.dark' }}>
