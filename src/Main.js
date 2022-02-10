@@ -67,11 +67,9 @@ const useStyles = makeStyles(theme => ({
     opacity: 0.3,
     padding: '1rem 0px',
     width: '90%',
-    borderRadius: '150px',
   },
   SoundcloudBox: {
     opacity: 0.1,
-    borderRadius: '150px',
   },
 }))
 
@@ -116,10 +114,8 @@ export default function Main() {
             </AppBar>
           </Parallax>
           <Parallax x={['0px', '0px']} y={['-40%', '40%']} scale={[1.0, 1.0]} opacity={[1, 0]} className={classes.foo}>
-            <div className='bar' />
-            <Container
+            <Container maxWidth="sm"
               sx={{
-                maxWidth: '350px',
                 bgcolor: 'primary.main',
                 boxShadow: 3,
                 borderRadius: 5,
@@ -135,10 +131,10 @@ export default function Main() {
                   onInit={typewriter => {
                     typewriter
                       .typeString('A warm welcome to you')
-                      .pauseFor(1000)
+                      .pauseFor(300)
                       .deleteAll()
                       .typeString(
-                        'I am Arie a software developer. I am specialized making React apps. Technologys i like to work with are: React, HTML5, SCSS, Material UI, Typescript, NPM, Github. In need of my skills? Feel free to contact me...',
+                        'I am Arie a software developer. I am specialized making React apps. Technologys i like to work with are: React, HTML5, SCSS, Material UI, Javascript, Typescript, NPM, Github. In need of my skills? Feel free to contact me...',
                       )
                       .pauseFor(3000)
                       .start()
