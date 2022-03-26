@@ -131,10 +131,10 @@ export default function Main() {
                   onInit={typewriter => {
                     typewriter
                       .typeString('A warm welcome to you')
-                      .pauseFor(300)
+                      .pauseFor(200)
                       .deleteAll()
                       .typeString(
-                        'I am Arie a software developer. I am specialized making React apps. Technologys i like to work with are: React, HTML5, SCSS, Material UI, Javascript, Typescript, NPM, Github. In need of my skills? Feel free to contact me...',
+                        'I am Arie a software developer. I am specialized making React apps. Technologys I like to work with are: React, HTML5, SCSS, Styled Components, Javascript Animations, Material UI, Javascript, Typescript, NPM, Github. In need of my skills? Feel free to contact me...',
                       )
                       .pauseFor(3000)
                       .start()
