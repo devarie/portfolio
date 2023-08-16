@@ -165,7 +165,7 @@ export default function Main() {
             <Container sx={{ py: 8, bgcolor: 'primary.light', boxShadow: 0 }} maxWidth='md'>
               {/* End hero unit */}
               <Grid container spacing={2}>
-                {cards.map(card => (
+                {cards.reverse().map(card => (
                   <Grid item key={card} xs={12} sm={6} md={4}>
                     <Card
                       className={classes.card}

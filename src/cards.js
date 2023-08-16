@@ -5,6 +5,7 @@ import freshservice_banner_groot from './images/freshservice_banner_groot.jpeg'
 import Mestudio from './images/Mestudio.jpeg'
 import streetart1 from './images/Streetart1.jpeg'
 import Fashionboat from './images/Fashionboat.PNG'
+import WijnbarVindict from './images/WijnbarVindict.PNG'
 
 const cards = [
   {
@@ -55,6 +56,13 @@ const cards = [
     title: 'Businessportal',
     info: 'Implemented new styling to a employee portal',
     link: '',
+  },
+  {
+    id: 8,
+    img: WijnbarVindict,
+    title: 'Wijnbar Vindict',
+    info: 'Wordpress elementor website, Formitable restaurant implementation',
+    link: 'https://wijnbarvindict.nl/',
   },
 ]
 
